@@ -15,7 +15,7 @@ export default function App() {
      <Stack.Navigator screenOptions={{
           headerShown: false
         }}
-        initialRouteName={"LogIn"}>
+        initialRouteName={"SignUp"}>
       <Stack.Screen name ="LangingPage" component={LandingPage}/>
       <Stack.Screen name="LogIn" component={LogIn}/>
       <Stack.Screen name="SignUp" component={SignUp}/>

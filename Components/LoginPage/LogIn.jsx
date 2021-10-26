@@ -5,8 +5,7 @@ import { COLORS, FONTS } from "../../Constants/index";
 import styles from "./styles";
 import ImageBackgroundView from "../GlobalComponents/ImageBackground/ImageBackgroundView";
 
-const LogIn = (props) => {
-    console.log('props',props)
+const LogIn = ({navigation}) => {
   // usestates
   const [isShow, setIsShow] = useState(true);
 
@@ -14,6 +13,9 @@ const LogIn = (props) => {
   const changePasswordViewState = () => {
     setIsShow(!isShow);
   };
+  const authenticate=()=>{
+      navigation.navigate('Home')
+  }
 
   //   functional component
   const PassWordViewState = () => (
@@ -58,6 +60,7 @@ const LogIn = (props) => {
             buttonStyle={{
               backgroundColor: COLORS.primary
             }}
+            onPress={()=>authenticate()}
           />
           <View
             style={{
@@ -88,7 +91,7 @@ const LogIn = (props) => {
             titleStyle={{
               color: COLORS.primary
             }}
-
+            onPress={()=>navigation.navigate('SignUp')}
           />
         </View>
       </View>
