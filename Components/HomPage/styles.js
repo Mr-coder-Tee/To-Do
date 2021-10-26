@@ -1,6 +1,6 @@
 import { StyleSheet,StatusBar,Dimensions } from "react-native";
 import {FONTS,COLORS,SIZES} from '../../Constants/index'
-const width=Dimensions.get('screen').width*.4
+const height=Dimensions.get('screen').height*.25
 
 const styles=StyleSheet.create({
   conatainer:{
@@ -10,14 +10,38 @@ const styles=StyleSheet.create({
   form:{
     padding:10,
   },
-  line:{
-    width:width,
-    height:1.5,
-    backgroundColor:COLORS.primary
-    
-  },
+
   btnHolder:{
     padding:20,
+  },
+  searchContainer:{
+
+    flexDirection:'row',
+    justifyContent:'center',
+    alignItems:'center',
+    borderWidth:1,
+    borderRadius:50,
+    padding:5
+  },
+  searchInput:{
+    padding:5,
+    width:'80%',
+  },
+  dateContainer:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    paddingLeft:20,
+    paddingRight:20,
+    marginTop:10,
+  },
+  monthContainer:{
+    flexDirection:'row',
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  header:{    
+    padding:10,
+    height:height,
   }
 
 })

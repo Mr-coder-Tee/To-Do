@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity,ScrollView } from "react-native";
 import { Button, Input, Icon } from "react-native-elements";
 import { COLORS, FONTS } from "../../Constants/index";
 import styles from "./styles";
@@ -32,7 +32,8 @@ const LogIn = ({navigation}) => {
   );
 
   return (
-    <View>
+    <View style={styles.conatainer}>
+      <ScrollView>
       <ImageBackgroundView />
       <Text style={{ ...FONTS.h1, fontWeight: "bold" }}>Welcome Back</Text>
       <View style={styles.form}>
@@ -95,6 +96,7 @@ const LogIn = ({navigation}) => {
           />
         </View>
       </View>
+      </ScrollView>
     </View>
   );
 };

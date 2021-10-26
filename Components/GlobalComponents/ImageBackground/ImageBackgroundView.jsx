@@ -18,8 +18,8 @@ const ImageBackgroundView = () => {
     <View
       style={{
         overflow: "hidden",
-        borderBottomLeftRadius: 30,
-        borderBottomRightRadius: 30
+        borderRadius:20,
+        margin:5
       }}
     >
       <ImageBackground source={img} resizeMode="cover" style={styles.container}>
