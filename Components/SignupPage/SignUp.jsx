@@ -9,7 +9,9 @@ const SignUp = ({navigation}) => {
   const [isShow, setIsShow] = useState(true);
 
 
-
+  const changePasswordViewState = () => {
+    setIsShow(!isShow);
+  };
   const signupuser=()=>{
       console.log('signedf up')
   }
