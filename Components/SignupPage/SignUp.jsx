@@ -4,16 +4,30 @@ import styles from "../LoginPage/styles";
 import { Button, Input, Icon } from "react-native-elements";
 import { COLORS, FONTS } from "../../Constants/index";
 import ImageBackgroundView from "../GlobalComponents/ImageBackground/ImageBackgroundView";
+import axios from 'axios';
+// import {BASE_URL} from '@env'
+
+
 
 const SignUp = ({navigation}) => {
   const [isShow, setIsShow] = useState(true);
+
+
+
+
+  const register=(email,password)=>{
+      axios.post(' https://06a3-102-252-64-136.ngrok.io/api/register').then(reponse=>{
+          console.log(reponse.data)
+      }).catch(e=>console.log(e.message))
+  }
 
 
   const changePasswordViewState = () => {
     setIsShow(!isShow);
   };
   const signupuser=()=>{
-      console.log('signedf up')
+      console.log('signed up');
+      register('tr@gmail.com','123456878')
   }
 
 

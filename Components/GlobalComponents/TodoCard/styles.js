@@ -1,9 +1,9 @@
-import { StyleSheet, StatusBar } from "react-native";
+import { StyleSheet, StatusBar,Dimensions } from "react-native";
 import { FONTS, COLORS, SIZES } from '../../../Constants/index'
+const width = Dimensions.get("screen").width - 30;
 
 const styles = StyleSheet.create({
   conatainer: {
-
     width: '100%',
     height: 90,
     shadowColor: "#000",

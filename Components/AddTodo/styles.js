@@ -1,6 +1,6 @@
 import { StyleSheet, StatusBar, Dimensions } from "react-native";
 import { FONTS, COLORS, SIZES } from '../../Constants/index'
-const lineWidth = Dimensions.get('screen').width * .4
+const lineWidth = Dimensions.get('screen').width * .3
 const viewWidth = Dimensions.get('screen').width * .9
 const viewHeight = Dimensions.get('screen').height * .5
 const boxSize=50
@@ -14,7 +14,8 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   addCardView: {
-    backgroundColor: COLORS.White,
+    backgroundColor: 'rgba(255,255,255,.4)',
+    padding:10,
     height: viewHeight,
     width: viewWidth,
     shadowColor: "#000",
