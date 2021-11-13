@@ -16,7 +16,7 @@ const SignUp = ({navigation}) => {
 
 
   const register=(email,password)=>{
-      axios.post(' https://06a3-102-252-64-136.ngrok.io/api/register').then(reponse=>{
+      axios.post('http://127.0.0.1:8000/api/register').then(reponse=>{
           console.log(reponse.data)
       }).catch(e=>console.log(e.message))
   }
